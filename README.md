@@ -8,7 +8,7 @@ Just a basic todo app that I wrote using vanilla JavaScript so there's not much 
 
 ## Demo
 
-Insert gif or link to demo
+
 
 https://epic-visvesvaraya-122d35.netlify.app/
 
