@@ -28,12 +28,12 @@ const addTodo = (event) => {
     completeBtn.classList.add("complete-btn");
 
     todoDiv.appendChild(completeBtn);
-    //edit btn
-    const editBtn = document.createElement("button");
-    editBtn.innerHTML = `<i class ="far fa-edit"></i>`;
-    editBtn.classList.add("edit-btn");
+    // //edit btn
+    // const editBtn = document.createElement("button");
+    // editBtn.innerHTML = `<i class ="far fa-edit"></i>`;
+    // editBtn.classList.add("edit-btn");
 
-    todoDiv.appendChild(editBtn);
+    // todoDiv.appendChild(editBtn);
     //trash btn
     const trashBtn = document.createElement("button");
     trashBtn.innerHTML = `<i class ="fas fa-trash"></i>`;
@@ -60,8 +60,10 @@ const deleteCheckEdit = (e) => {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
   }
-  if (item.classList[0] === "edit-btn") {
-  }
+  // if (item.classList[0] === "edit-btn") {
+  //   const todo = e.firstChild.node;
+  //   let editValue = prompt("Edit The Item", todo);
+  // }
 };
 
 const filterTodo = (e) => {
