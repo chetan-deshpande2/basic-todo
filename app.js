@@ -1,5 +1,4 @@
 // selectors
-
 const todoInput = document.querySelector(".todo-input");
 const todoBtn = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
@@ -10,7 +9,7 @@ const filterOption = document.querySelector(".filter-todo");
 const addTodo = (event) => {
   event.preventDefault();
   if (todoInput.value == "") {
-    alert("Pls enter Task");
+    alert("Please Enter Valid Input");
   } else {
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo"); // to give class to div
@@ -28,7 +27,7 @@ const addTodo = (event) => {
     completeBtn.classList.add("complete-btn");
 
     todoDiv.appendChild(completeBtn);
-    // //edit btn
+    // edit btn
     // const editBtn = document.createElement("button");
     // editBtn.innerHTML = `<i class ="far fa-edit"></i>`;
     // editBtn.classList.add("edit-btn");
@@ -129,11 +128,11 @@ const getTodos = (todo) => {
 
     todoDiv.appendChild(completeBtn);
     //edit btn
-    const editBtn = document.createElement("button");
-    editBtn.innerHTML = `<i class ="far fa-edit"></i>`;
-    editBtn.classList.add("edit-btn");
+    // const editBtn = document.createElement("button");
+    // editBtn.innerHTML = `<i class ="far fa-edit"></i>`;
+    // editBtn.classList.add("edit-btn");
 
-    todoDiv.appendChild(editBtn);
+    // todoDiv.appendChild(editBtn);
     //trash btn
     const trashBtn = document.createElement("button");
     trashBtn.innerHTML = `<i class ="fas fa-trash"></i>`;
@@ -159,6 +158,9 @@ const removeLocalTodos = (todo) => {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+
+//  listners 
 document.addEventListener("DOMContentLoaded", getTodos);
 todoBtn.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheckEdit);
